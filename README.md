@@ -15,12 +15,13 @@ lfexpctnchk [-v]
 
 ## 変更履歴
 <table>
-	<tr><td>0.1</td><td>2019.6.12</td><td>
+	<tr><th>0.1</th><th>2019.6.12</th><td>
 		<div>・日本語化</div>
 		<div>・年毎の月日数表示はオプション指定にする</div>
 		<div>・Ruby対応</div>
+		<div>・Perl対応</div>
 	</td>
-	<tr><td>0.0</td><td>2019.6.10</td><td>
+	<tr><th>0.0</th><th>2019.6.10</th><td>
 		<div>初版</div>
 	</td>
 </table>
