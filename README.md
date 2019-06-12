@@ -18,6 +18,7 @@ lfexpctnchk [-v]
 	<tr><td>0.1</td><td>2019.6.12</td>
 		<td>・日本語化</td>
 		<td>・年毎の月日数表示はオプション指定にする</td>
+		<td>・Ruby対応</td>
 	<tr><td>0.0</td><td>2019.6.10</td>
 		<td>初版</td>
 </table>

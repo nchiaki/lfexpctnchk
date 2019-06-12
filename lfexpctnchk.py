@@ -94,16 +94,16 @@ while ynum <= endyr:	# 希望寿命まで計算
 			#
 			if ((ynum == endyr) and (mnm == months[bmnum-1])):
 				# 寿命到達月の日数を取得して終了
-				if (vprt == 1): print mnum+1, mnm, months[mnum], dnum
+				if (vprt == 1): print mnum+1, mnm, dnum
 				ttldys += dnum
 				break
 			else:
 				# 通常の月日数を取得
-				if (vprt == 1): print mnum+1, mnm, months[mnum], mxdays[mnm]
+				if (vprt == 1): print mnum+1, mnm, mxdays[mnm]
 				ttldys += mxdays[mnm]
 		elif mnm == months[bmnum-1]:
 			# 誕生月の日数を取得
-			if (vprt == 1): print mnum+1, mnm, months[mnum], mxdays[mnm]-dnum
+			if (vprt == 1): print mnum+1, mnm, mxdays[mnm]-dnum
 			ttldys += (mxdays[mnm] - dnum)
 			brned = 1
 
@@ -111,7 +111,6 @@ while ynum <= endyr:	# 希望寿命まで計算
 	ynum += 1
 
 print "全日数:", ttldys, "days (", ttldys*24, "hours)"
-check = commands.getoutput("date")
 print "今日は", crryr, crrmn, "/", crrdt
 print "今日まで", untldys, "days"
 print "希望寿命まであと", ttldys-untldys, "days left (", (ttldys-untldys)*24, "hours)"
