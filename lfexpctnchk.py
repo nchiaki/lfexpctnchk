@@ -14,7 +14,7 @@ while (ix < argc):
 		iampthn = len(iampth)
 		#print iampth[iampthn-1], ": Calculate the number of days until the desired life"
 		print iampth[iampthn-1], "[-v]"
-		print "         希望寿命までの日数を算出します"
+		print "      希望寿命までの日数を算出します"
 		print "      -v : 年毎の月日数表示を行います"
 		sys.exit(0)
 	elif (argv[ix] == "-v"):

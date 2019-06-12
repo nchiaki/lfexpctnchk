@@ -9,7 +9,7 @@ while ix < argc do
 		iampth = ARGV[0].split("/")
 		iampthn = iampth.length
 		print iampth[iampthn-1], "[-v]\n"
-		print "         希望寿命までの日数を算出します\n"
+		print "      希望寿命までの日数を算出します\n"
 		print "      -v : 年毎の月日数表示を行います\n"
 		exit(0)
 	elsif (ARGV[ix] == "-v") then
