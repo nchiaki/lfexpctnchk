@@ -68,16 +68,27 @@ crrmn = int(crrtdt[1])
 crrdt = int(crrtdt[2])
 untldys = 0
 
+# 1年の日数を取得
+nmlyrdys = 0
+lpyrdys = 0
+for mnm in months:	# 一年分計算
+	nmlyrdys += mmxdays[mnm]
+	lpyrdys += mmxleapdays[mnm]
+
+brnyr = "";
 ttldys = 0
 while ynum <= endyr:	# 希望寿命まで計算
 	# 閏年判定と月日数データの割り付け
 	if ynum % 4 == 0:
 		if ynum % 100 == 0:
 			mxdays = mmxdays
+			yrdys = nmlyrdys
 		else:
 			mxdays = mmxleapdays
+			yrdys = lpyrdys
 	else:
 			mxdays = mmxdays
+			yrdys = nmlyrdys
 
 	if mxdays[months[1]] == 29:
 		if (vprt == 1): print ynum , "Leap"
@@ -99,12 +110,18 @@ while ynum <= endyr:	# 希望寿命まで計算
 				break
 			else:
 				# 通常の月日数を取得
-				if (vprt == 1): print mnum+1, mnm, mxdays[mnm]
-				ttldys += mxdays[mnm]
+				if ((brnyr == ynum) or (ynum == crryr) or (ynum == endyr) or (vprt == 1)):
+					if (vprt == 1): print mnum+1, mnm, mxdays[mnm]
+					ttldys += mxdays[mnm]
+				else:
+					#print ynum, yrdys
+					ttldys += yrdys
+					break
 		elif mnm == months[bmnum-1]:
 			# 誕生月の日数を取得
 			if (vprt == 1): print mnum+1, mnm, mxdays[mnm]-dnum
 			ttldys += (mxdays[mnm] - dnum)
+			brnyr = ynum
 			brned = 1
 
 		mnum += 1

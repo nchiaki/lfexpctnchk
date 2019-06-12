@@ -18,6 +18,7 @@ lfexpctnchk [-v]
 	<tr><th>0.1</th><th>2019.6.12</th><td>
 		<div>・日本語化</div>
 		<div>・年毎の月日数表示はオプション指定にする</div>
+		<div>・pythonの高速化（実用の範囲内では効果なし）</div>
 		<div>・Ruby対応</div>
 		<div>・Perl対応</div>
 	</td>
