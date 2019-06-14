@@ -71,9 +71,16 @@ untldys = 0
 ttldys = 0
 while ynum <= endyr do	# 希望寿命まで計算
 	# 閏年判定と月日数データの割り付け
+    # 西暦年が4で割り切れる年は(原則として)閏年。
+    # ただし、西暦年が100で割り切れる年は(原則として)平年。
+    # ただし、西暦年が400で割り切れる年は必ず閏年。
 	if ynum % 4 == 0 then
 		if ynum % 100 == 0 then
-			mxdays = mmxdays
+			if ynum % 400 == 0 then
+				mxdays = mmxleapdays
+			else
+				mxdays = mmxdays
+			end
 		else
 			mxdays = mmxleapdays
 		end
